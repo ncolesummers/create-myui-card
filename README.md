@@ -13,3 +13,5 @@ It's a simple project boilerplate that includes the following:
  - [ESLint](https://eslint.org/)
 
 The CICD pipeline is configured to create a release and publish to NPM when a new tag is created.
+
+While the delivery pipeline builds a version for windows and linux, this is only tested on macOS.
