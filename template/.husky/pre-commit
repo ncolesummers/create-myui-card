@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# quit script if we're in CI
+[ -n "$CI" ] && exit 0
+
+. "$(dirname "$0")/_/husky.sh"
+
+npx lint-staged
+
+# check branch name and increment version if necessary
+npx -y zx scripts/versionBump.mjs
